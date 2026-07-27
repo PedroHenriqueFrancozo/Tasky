@@ -15,7 +15,11 @@ class LoginScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   
-                  Icon(Icons.check_box_outlined),
+                  Image.asset("assets/images/logo.png",
+                  width: 56,
+                  height: 56,
+                  ),
+                  
                   SizedBox(width: 8,),
                   Text('Tasky',
                     style: TextStyle(
@@ -96,13 +100,15 @@ class LoginScreen extends StatelessWidget {
                     
                     SizedBox(height: 8,),
                     TextField(
-                      obscureText: true, decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.lock),  
+                      obscureText: false, decoration: InputDecoration(
+                        prefixIcon: Icon(Icons.lock_outline),  
                         prefixIconColor: Color(0xFFFFFFFF),                      
                         hintText: 'Digite sua senha',
                         hintStyle: TextStyle(
                           color: Color(0xFFFFFFFF)
                         ),
+                        suffixIcon: Icon(Icons.visibility_outlined),
+                        suffixIconColor: Color(0xFFFFFFFF),
 
 
                       enabledBorder: OutlineInputBorder(
@@ -126,6 +132,8 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
             ),
+            
+              SizedBox(height: 8,),
 
               SizedBox(
                 width: 354,
@@ -134,8 +142,12 @@ class LoginScreen extends StatelessWidget {
 
                     child: TextButton(
                       onPressed: () {}, 
-                      child: Text('Esqueceu sua senha?')),
-                  )
+                      style: TextButton.styleFrom(
+                        foregroundColor: Color(0xFFFFFFFF)
+                      ),
+                      child: Text('Esqueceu sua senha?')
+                    ),
+                  ),
               ),
               
               SizedBox(height: 16,),
@@ -146,6 +158,9 @@ class LoginScreen extends StatelessWidget {
                 style: ElevatedButton.styleFrom(
                   backgroundColor: Colors.white,
                   foregroundColor: Color(0xFF502D55),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12)
+                  ),
                   fixedSize: Size(344, 53),              
                   textStyle: TextStyle( 
                     fontSize: 16,
