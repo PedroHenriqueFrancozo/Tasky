@@ -22,4 +22,10 @@ class AppTextStyles {
     color: AppColors.white,
   );
 
+  static const TextStyle buttonText = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 16,
+    fontWeight: FontWeight.bold,
+  );
+
 }

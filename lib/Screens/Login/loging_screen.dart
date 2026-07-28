@@ -10,7 +10,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.primary,
       body: Center( 
-          child: Padding(padding: EdgeInsets.all(24),
+          child: Padding(padding: const EdgeInsets.all(24),
           child: Column(
             children: [
               Row(
@@ -24,25 +24,16 @@ class LoginScreen extends StatelessWidget {
                   
                   SizedBox(width: 8,),
                   Text('Tasky',
-                    style: TextStyle(
-                    fontFamily: 'Cormorant Garamond',
-                    fontWeight: FontWeight.bold,
-                    fontSize: 40,
-                    color: AppColors.white,
-                    ),
+                    style: AppTextStyles.title
                   ),
                 ],
               ),
-
               
               Text('Organize suas tarefas. Alcance seus objetivos.',
-                style: TextStyle(
-                  color: AppColors.white,
-                  fontSize: 13,
-                ),
+                style: AppTextStyles.subtitle
               ),
 
-              SizedBox(height: 40),
+              const SizedBox(height: 40),
 
               SizedBox(
                 width: 354,
@@ -50,20 +41,15 @@ class LoginScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text('E-mail',
-                      style: TextStyle(
-                        color: AppColors.white
-                      ),
+                      style: AppTextStyles.label,
                     ),
-                    SizedBox(height: 8,),
+                    const SizedBox(height: 8,),
 
                     TextField(decoration: InputDecoration(
                       prefixIcon: Icon(Icons.email_outlined),
                       prefixIconColor: AppColors.white,
                       hintText: 'Digite seu e-mail',
-                      hintStyle: TextStyle( 
-                        color: AppColors.white,
-                      ),
-                      
+                      hintStyle: AppTextStyles.label,
 
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -83,7 +69,7 @@ class LoginScreen extends StatelessWidget {
                       )  
                     ),
                   ),
-                  SizedBox(height: 16),
+                  const SizedBox(height: 16),
                 ],
               ),   
             ),
@@ -95,9 +81,7 @@ class LoginScreen extends StatelessWidget {
                   
                   children: [
                     Text('Senha',
-                      style: TextStyle(
-                        color: AppColors.white,
-                        ),                     
+                      style: AppTextStyles.label,              
                     ),
                     
                     SizedBox(height: 8,),
@@ -106,12 +90,10 @@ class LoginScreen extends StatelessWidget {
                         prefixIcon: Icon(Icons.lock_outline),  
                         prefixIconColor: AppColors.white,                      
                         hintText: 'Digite sua senha',
-                        hintStyle: TextStyle(
-                          color: AppColors.white,
-                        ),
+                        hintStyle: AppTextStyles.label,
+
                         suffixIcon: Icon(Icons.visibility_outlined),
                         suffixIconColor: AppColors.white,
-
 
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -135,7 +117,7 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             
-              SizedBox(height: 8,),
+              const SizedBox(height: 8,),
 
               SizedBox(
                 width: 354,
@@ -146,13 +128,14 @@ class LoginScreen extends StatelessWidget {
                       onPressed: () {}, 
                       style: TextButton.styleFrom(
                         foregroundColor: AppColors.white,
+                        textStyle: AppTextStyles.label,
                       ),
                       child: Text('Esqueceu sua senha?')
                     ),
                   ),
               ),
               
-              SizedBox(height: 40,),
+              const SizedBox(height: 40,),
 
               SizedBox(
                 width: 354,
@@ -163,19 +146,24 @@ class LoginScreen extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12)
                   ),
-                  fixedSize: Size(344, 53),              
-                  textStyle: TextStyle( 
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold
-                    ),
+                  fixedSize: Size(344, 53),   
+
+                  textStyle: AppTextStyles.buttonText
+
                 ),
                 child: Text('Entrar')),
+                
               ),
 
-              SizedBox(height: 16,),
+              const SizedBox(height: 16,),
 
               TextButton(
               onPressed: () {}, 
+              style: TextButton.styleFrom(
+                foregroundColor: AppColors.white,
+                textStyle: AppTextStyles.label,
+              ),
+
               child: Text('Cadastra-se')),
             ],
           ) ,
