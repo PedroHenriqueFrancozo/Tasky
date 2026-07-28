@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:tasky_flutter/theme/app_colors.dart';
+import 'package:tasky_flutter/theme/app_text_styles.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -6,7 +8,7 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF502D55),
+      backgroundColor: AppColors.primary,
       body: Center( 
           child: Padding(padding: EdgeInsets.all(24),
           child: Column(
@@ -26,7 +28,7 @@ class LoginScreen extends StatelessWidget {
                     fontFamily: 'Cormorant Garamond',
                     fontWeight: FontWeight.bold,
                     fontSize: 40,
-                    color: Color(0xFFFFFFFF),
+                    color: AppColors.white,
                     ),
                   ),
                 ],
@@ -35,7 +37,7 @@ class LoginScreen extends StatelessWidget {
               
               Text('Organize suas tarefas. Alcance seus objetivos.',
                 style: TextStyle(
-                  color: Color(0xFFFFFFFF),
+                  color: AppColors.white,
                   fontSize: 13,
                 ),
               ),
@@ -49,34 +51,34 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     Text('E-mail',
                       style: TextStyle(
-                        color: Color(0xFFFFFFFF)
+                        color: AppColors.white
                       ),
                     ),
                     SizedBox(height: 8,),
 
                     TextField(decoration: InputDecoration(
                       prefixIcon: Icon(Icons.email_outlined),
-                      prefixIconColor: Color(0XFFFFFFFF),
+                      prefixIconColor: AppColors.white,
                       hintText: 'Digite seu e-mail',
                       hintStyle: TextStyle( 
-                        color:Color(0XFFFFFFFF),
+                        color: AppColors.white,
                       ),
                       
 
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
-                          color: Color(0X10FFFFFF),
+                          color: AppColors.inputBackground,
                           width: 2,
                         ),                
                       ),
                       filled: true,
-                      fillColor: Color(0x10FFFFFF),
+                      fillColor: AppColors.inputBackground,
 
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
-                          color: Color(0x50FFFFFF)
+                          color: AppColors.focusBorder
                         )
                       )  
                     ),
@@ -94,7 +96,7 @@ class LoginScreen extends StatelessWidget {
                   children: [
                     Text('Senha',
                       style: TextStyle(
-                        color: Color(0xFFFFFFFF)
+                        color: AppColors.white,
                         ),                     
                     ),
                     
@@ -102,29 +104,29 @@ class LoginScreen extends StatelessWidget {
                     TextField(
                       obscureText: false, decoration: InputDecoration(
                         prefixIcon: Icon(Icons.lock_outline),  
-                        prefixIconColor: Color(0xFFFFFFFF),                      
+                        prefixIconColor: AppColors.white,                      
                         hintText: 'Digite sua senha',
                         hintStyle: TextStyle(
-                          color: Color(0xFFFFFFFF)
+                          color: AppColors.white,
                         ),
                         suffixIcon: Icon(Icons.visibility_outlined),
-                        suffixIconColor: Color(0xFFFFFFFF),
+                        suffixIconColor: AppColors.white,
 
 
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
-                          color:Color(0x10FFFFFF),
+                          color:AppColors.inputBackground,
                           width: 2,
                         ),
                       ),
                       filled: true,
-                      fillColor: Color(0x10FFFFFF),
+                      fillColor: AppColors.inputBackground,
 
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(12),
                         borderSide: BorderSide(
-                          color: Color(0x50FFFFFF)
+                          color: AppColors.focusBorder,
                         )
                       )  
                     ),                                                               
@@ -143,21 +145,21 @@ class LoginScreen extends StatelessWidget {
                     child: TextButton(
                       onPressed: () {}, 
                       style: TextButton.styleFrom(
-                        foregroundColor: Color(0xFFFFFFFF)
+                        foregroundColor: AppColors.white,
                       ),
                       child: Text('Esqueceu sua senha?')
                     ),
                   ),
               ),
               
-              SizedBox(height: 16,),
+              SizedBox(height: 40,),
 
               SizedBox(
                 width: 354,
                 child: ElevatedButton(onPressed: () {},
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: Color(0xFF502D55),
+                  backgroundColor: AppColors.white,
+                  foregroundColor: AppColors.primary,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12)
                   ),
