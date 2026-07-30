@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tasky_flutter/theme/app_colors.dart';
 import 'package:tasky_flutter/theme/app_text_styles.dart';
+import 'package:tasky_flutter/widgets/app_text_field.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -37,83 +38,22 @@ class LoginScreen extends StatelessWidget {
 
               SizedBox(
                 width: 354,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text('E-mail',
-                      style: AppTextStyles.label,
-                    ),
-                    const SizedBox(height: 8,),
-
-                    TextField(decoration: InputDecoration(
-                      prefixIcon: Icon(Icons.email_outlined),
-                      prefixIconColor: AppColors.white,
-                      hintText: 'Digite seu e-mail',
-                      hintStyle: AppTextStyles.label,
-
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(
-                          color: AppColors.inputBackground,
-                          width: 2,
-                        ),                
-                      ),
-                      filled: true,
-                      fillColor: AppColors.inputBackground,
-
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(
-                          color: AppColors.focusBorder
-                        )
-                      )  
-                    ),
-                  ),
-                  const SizedBox(height: 16),
-                ],
+                child: AppTextField(
+                  label: 'E-mail',
+                  hintText: 'Digite seu e-mail',
+                  icon: Icons.email_outlined,
               ),   
             ),
 
+            const SizedBox(height: 16,),
+
               SizedBox(
                 width: 354,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  
-                  children: [
-                    Text('Senha',
-                      style: AppTextStyles.label,              
-                    ),
-                    
-                    SizedBox(height: 8,),
-                    TextField(
-                      obscureText: false, decoration: InputDecoration(
-                        prefixIcon: Icon(Icons.lock_outline),  
-                        prefixIconColor: AppColors.white,                      
-                        hintText: 'Digite sua senha',
-                        hintStyle: AppTextStyles.label,
-
-                        suffixIcon: Icon(Icons.visibility_outlined),
-                        suffixIconColor: AppColors.white,
-
-                      enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(
-                          color:AppColors.inputBackground,
-                          width: 2,
-                        ),
-                      ),
-                      filled: true,
-                      fillColor: AppColors.inputBackground,
-
-                      focusedBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(12),
-                        borderSide: BorderSide(
-                          color: AppColors.focusBorder,
-                        )
-                      )  
-                    ),                                                               
-                  ),
-                ],
+                child: AppTextField(
+                  label: 'Senha',
+                  hintText: 'Digite sua senha',
+                  icon: Icons.lock_outline,
+                  obscureText: true,
               ),
             ),
             
