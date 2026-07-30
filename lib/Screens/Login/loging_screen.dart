@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:tasky_flutter/theme/app_colors.dart';
 import 'package:tasky_flutter/theme/app_text_styles.dart';
 import 'package:tasky_flutter/widgets/app_text_field.dart';
+import 'package:tasky_flutter/widgets/app_button.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -79,20 +80,10 @@ class LoginScreen extends StatelessWidget {
 
               SizedBox(
                 width: 354,
-                child: ElevatedButton(onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: AppColors.white,
-                  foregroundColor: AppColors.primary,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(12)
-                  ),
-                  fixedSize: Size(344, 53),   
-
-                  textStyle: AppTextStyles.buttonText
-
+                child: AppButton(
+                  text: 'Entrar',
+                  onPressed: () {},
                 ),
-                child: Text('Entrar')),
-                
               ),
 
               const SizedBox(height: 16,),
