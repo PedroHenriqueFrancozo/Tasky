@@ -3,6 +3,7 @@ import 'package:tasky_flutter/theme/app_colors.dart';
 import 'package:tasky_flutter/theme/app_text_styles.dart';
 import 'package:tasky_flutter/widgets/app_text_field.dart';
 import 'package:tasky_flutter/widgets/app_button.dart';
+import 'package:tasky_flutter/widgets/app_header.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -15,25 +16,7 @@ class LoginScreen extends StatelessWidget {
           child: Padding(padding: const EdgeInsets.all(24),
           child: Column(
             children: [
-              Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  
-                  Image.asset("assets/images/logo.png",
-                  width: 56,
-                  height: 56,
-                  ),
-                  
-                  SizedBox(width: 8,),
-                  Text('Tasky',
-                    style: AppTextStyles.title
-                  ),
-                ],
-              ),
-              
-              Text('Organize suas tarefas. Alcance seus objetivos.',
-                style: AppTextStyles.subtitle
-              ),
+              const AppHeader(),
 
               const SizedBox(height: 40),
 
