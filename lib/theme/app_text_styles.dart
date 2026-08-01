@@ -28,9 +28,21 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
   );
 
+  static const TextStyle subButton = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 13,
+    fontWeight: FontWeight.bold,
+  );
+
   static const TextStyle socialButton = TextStyle(
     fontFamily: 'Inter',
     fontSize: 16,
+  );
+
+  static const TextStyle text = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 13,
+    color: AppColors.white,
   );
 
 }

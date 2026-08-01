@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tasky_flutter/theme/app_colors.dart';
 import 'package:tasky_flutter/theme/app_text_styles.dart';
 
 class AppSocialButton extends StatelessWidget{
     final String text;
     final VoidCallback onPressed;
-    final IconData icon;
+    final String imagePath;
 
     const AppSocialButton({
         super.key,
 
-        required this.icon,
+        required this.imagePath,
         required this.text,
         required this.onPressed,
     });
@@ -38,7 +39,7 @@ class AppSocialButton extends StatelessWidget{
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(icon),
+              SvgPicture.asset(imagePath),
               SizedBox(width: 8,),
               Text(text,
                 style: AppTextStyles.socialButton,

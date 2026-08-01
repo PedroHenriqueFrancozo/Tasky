@@ -105,14 +105,14 @@ class LoginScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     AppSocialButton(
-                      icon: Icons.g_mobiledata_sharp,
+                      imagePath: 'assets/images/google.svg',
                       text: 'Google',
                       onPressed: (){}),
                     
                     const SizedBox(width: 8,),
                       
                     AppSocialButton(
-                      icon: Icons.apple,
+                      imagePath: 'assets/images/apple.svg',
                       text: 'Apple', 
                       onPressed: (){}),
                   ],
@@ -122,15 +122,23 @@ class LoginScreen extends StatelessWidget {
 
               const SizedBox(height: 80,),
 
-              TextButton(
-              onPressed: () {}, 
-              style: TextButton.styleFrom(
-                foregroundColor: AppColors.white,
-                textStyle: AppTextStyles.label,
+              SizedBox(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Não tem uma conta?', 
+                      style: AppTextStyles.text,
+                    ),
+                    TextButton(
+                    onPressed: () {}, 
+                    style: TextButton.styleFrom(
+                      foregroundColor: AppColors.white,
+                      textStyle: AppTextStyles.subButton,
+                    ),
+                    child: Text('Cadastra-se',)),
+                  ],
+                ),
               ),
-
-              child: Text('Cadastra-se')),
-
             ],
           ) ,
         ),
