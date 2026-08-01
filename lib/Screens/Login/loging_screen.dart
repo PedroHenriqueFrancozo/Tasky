@@ -4,6 +4,7 @@ import 'package:tasky_flutter/theme/app_text_styles.dart';
 import 'package:tasky_flutter/widgets/app_text_field.dart';
 import 'package:tasky_flutter/widgets/app_button.dart';
 import 'package:tasky_flutter/widgets/app_header.dart';
+import 'package:tasky_flutter/widgets/app_social_button.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -69,7 +70,57 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
 
-              const SizedBox(height: 16,),
+              const SizedBox(height: 40,),
+
+              SizedBox(
+                width: 354,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Expanded(child: const Divider(
+                      color: AppColors.divider,
+                      thickness: 1,
+                    )),
+                    const SizedBox(width: 8,),
+                    Text('ou continue com',
+                    style: TextStyle(
+                        fontSize: 16,
+                        color: AppColors.white,
+                      ),
+                    ),
+                    const SizedBox(width: 8,),
+                    Expanded(child: const Divider(
+                      color: AppColors.divider,
+                      thickness: 1,
+                    )),
+                  ],
+                ),
+              ),
+
+              const SizedBox(height: 40,),
+
+              SizedBox(
+                width: 344,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AppSocialButton(
+                      icon: Icons.g_mobiledata_sharp,
+                      text: 'Google',
+                      onPressed: (){}),
+                    
+                    const SizedBox(width: 8,),
+                      
+                    AppSocialButton(
+                      icon: Icons.apple,
+                      text: 'Apple', 
+                      onPressed: (){}),
+                  ],
+                ),
+              ),
+
+
+              const SizedBox(height: 80,),
 
               TextButton(
               onPressed: () {}, 
@@ -79,6 +130,7 @@ class LoginScreen extends StatelessWidget {
               ),
 
               child: Text('Cadastra-se')),
+
             ],
           ) ,
         ),

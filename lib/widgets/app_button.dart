@@ -28,7 +28,7 @@ class AppButton extends StatelessWidget {
         ),
           fixedSize: Size(344, 53),   
 
-          textStyle: AppTextStyles.buttonText
+          textStyle: AppTextStyles.buttonText,
         ),
       ),
     );

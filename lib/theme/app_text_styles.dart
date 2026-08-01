@@ -28,4 +28,9 @@ class AppTextStyles {
     fontWeight: FontWeight.bold,
   );
 
+  static const TextStyle socialButton = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 16,
+  );
+
 }

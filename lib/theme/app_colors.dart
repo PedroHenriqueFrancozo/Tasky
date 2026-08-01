@@ -10,4 +10,6 @@ class AppColors {
 
   static const Color focusBorder = Color(0x50FFFFFF);
 
+  static const Color divider = Color(0x25FFFFFF);
+
 }
